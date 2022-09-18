@@ -1,0 +1,102 @@
+.container {
+    background: #212121 0% 0% no-repeat padding-box;
+    display: flex;
+    min-height: 100vh;
+
+    .l-s {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        height: 1080px;
+        position: relative;
+        .logo {
+            max-width: 548px;
+            background: transparent url(/assets/Logo.jpg) 0% 0% no-repeat padding-box;
+            height: 333px;
+            width: 100%;
+        }
+    }
+
+    .r-s {
+        display: inline-block;
+        background: transparent linear-gradient(180deg, #8556a4 0%, #2d2b52 100%) 0% 0% no-repeat padding-box;
+        min-height: 100%;
+        min-width: 800px;
+        z-index: 2;
+        .login {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding-left: 200px;
+            padding-right: 55px;
+        }
+        .title {
+            font-size: 72px;
+            color: white;
+        }
+        .input {
+            width: 100%;
+            height: 38px;
+            background: #222222 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            margin-top: 10px;
+            overflow: hidden;
+            &.invalid {
+                border:  1px solid #DC3545;
+            }
+            input {
+                width: 100%;
+                height: 100%;
+                border: none;
+                padding: 0;
+                background-color: inherit;
+                color: white;
+                padding: 0 12px;
+            }
+        }
+    }
+}
+
+.section-wrapper {
+    margin-top: 250px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+label {
+    color: white;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    background: #b6a3c2 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.illust-man {
+    width: 545px;
+    height: 435px;
+    background: transparent url(/assets/Man.svg) 0% 0% no-repeat padding-box;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.illust-woman {
+    width: 201px;
+    height: 402px;
+    background: transparent url(/assets/Woman.svg) 0% 0% no-repeat padding-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.validation {
+    color: #DC3545;
+    height: 20px;
+}

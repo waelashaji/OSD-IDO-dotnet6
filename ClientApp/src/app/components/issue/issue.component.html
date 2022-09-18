@@ -1,0 +1,50 @@
+<div #root class="issue">
+  <div style="padding: 15px;">
+
+    <div class="title">
+      <input [(ngModel)]="data.title" (change)="typing = true" type="text" placeholder="Title...">
+    </div>
+    <table>
+      <tr>
+        <td class="label">Category</td>
+        <td>
+          <input [(ngModel)]="data.category" (change)="typing = true" placeholder="Type here...">
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Date</td>
+        <td>
+          <input [value]="data.dueDate" (change)="updateDate($event)" style="cursor: text;" type="date"
+                 placeholder="Type here...">
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Estimate</td>
+        <td>
+          <input [(ngModel)]="data.estimate" (change)="typing = true" type="text" placeholder="Type here...">
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Importance</td>
+        <td>
+          <ng-container *ngIf="importanceShown && data.importance else Else">
+            <div (click)="importanceShown = false" [ngClass]="{low: data.importance=='Low', high: data.importance == 'High', medium: data.importance=='Medium'}"
+                 class="importance">{{data.importance}}</div>
+          </ng-container>
+          <ng-template #Else>
+            <select [(ngModel)]="data.importance" (change)="onImportanceChange()">
+              <option value="" disabled selected>Select your option</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </ng-template>
+        </td>
+      </tr>
+
+    </table>
+
+
+  </div>
+
+</div>

@@ -1,0 +1,72 @@
+.issue {
+  width: 418px;
+  height: 240px;
+  background: #212529 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 6px;
+  opacity: 1;
+  color: #ffffff;
+  font-size: 14px;
+
+  :not(:last-of-type) td {
+    padding-bottom: 22px;
+  }
+
+  .label {
+    color: #6c757d;
+    padding-right: 56px;
+  }
+
+  .title {
+    font-size: 16px;
+    height: 44px;
+  }
+
+  .importance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &.low {
+      background: #39AC95 0% 0% no-repeat padding-box;
+    }
+
+    &.medium {
+      background: #FE913E 0% 0% no-repeat padding-box;
+      width: 66px;
+    }
+
+    &.high {
+      background: #dc3545 0% 0% no-repeat padding-box;
+    }
+  }
+}
+
+input {
+  border: none;
+  background: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+select {
+  border: none;
+  background: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  option {
+      color: black;
+  }
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}

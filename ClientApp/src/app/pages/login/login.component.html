@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="l-s">
+        <div class="section-wrapper">
+            <div class="logo">
+            <div class="illust-woman"></div>
+            <div class="illust-man"></div>
+            </div>
+        </div>
+    </div>
+    <div class="r-s">
+        <div class="section-wrapper">
+            <div class="login">
+                <div class="title" style="padding-bottom: 40px;">Time to Work!</div>
+                <form [formGroup]="loginForm">
+                    <div style="margin-bottom: 60px">
+                        <label>Email</label>
+                        <div class="input" [ngClass]="{invalid: loginForm.get('email')?.invalid && loginForm.get('email')?.touched }">
+                            <input email [formControlName]="'email'" placeholder="user@example.com" type="text">
+                        </div>
+                        <div class="validation">
+                            <span *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">Invalid Email</span> 
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 46px;">
+                        <label>Password</label>
+                        <div class="input" [ngClass]="{invalid: loginForm.get('password')?.invalid && loginForm.get('password')?.touched}">
+                            <input [formControlName]="'password'" type="password">
+                        </div>
+                        <div class="validation" >
+                            <span *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">Incorrect Password</span> 
+                        </div>
+                    </div>
+                    <div class="button" (click)="login()">Sign In</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

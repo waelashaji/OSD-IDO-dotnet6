@@ -1,0 +1,47 @@
+.banner {
+    z-index: 2;
+    height: 68px;
+    background: transparent linear-gradient(180deg, #6e4c85 0%, #2d2b52 100%) 0% 0% no-repeat padding-box;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    &.hide {
+        display: none;
+    }
+    &:hover {
+        .remove {
+            display: block;
+        }
+    }
+    .content {
+        padding: 25px 45px;
+    }
+    .remove {
+        display: none;
+        position: absolute;
+        right: 45px;
+        width: 21px;
+        height: 21px;
+        background: transparent url(/assets/RemoveQuote.svg) 0% 0% no-repeat padding-box;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+}
+.show {
+    position: absolute;
+    right: 80px;
+    top: 40px;
+    width: 24px;
+    height: 24px;
+    background: transparent url(/assets/ShowQuote.svg) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+
+.sticky {
+    position: sticky;
+    top: 68px;
+    left: 0;
+    right: 0;
+}
