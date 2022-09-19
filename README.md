@@ -6,6 +6,6 @@
 4 run the application ( dotnet run ) <br/>
 5 in your browser, go to the specified listening port <br/>
 
-use the below credentials:
-email: email@example.com
-password: password
+use the below credentials: <br/>
+email: email@example.com <br/>
+password: password <br/>
