@@ -1,5 +1,6 @@
 ﻿using IDO.Models;
 using Microsoft.EntityFrameworkCore;
+using IDO_dotnet6.dotnet.Models;
 
 namespace IDO.Data
 {
@@ -22,6 +23,8 @@ namespace IDO.Data
         }
 
         public DbSet<Issue> Issues { get; set; }
+
+        public DbSet<IDO_dotnet6.dotnet.Models.DTO> DTO { get; set; }
 
     }
 }

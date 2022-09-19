@@ -1,12 +1,14 @@
 using IDO.Data;
+using IDO_dotnet6.dotnet.Services;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol.Core.Types;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddScoped<IIssueService, IssueService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddControllersWithViews();
-
 
 builder.Services.AddDbContext<IDODBContext>(options =>
 {
@@ -15,6 +17,7 @@ builder.Services.AddDbContext<IDODBContext>(options =>
 
 // Enable CORS
 var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 
 builder.Services.AddCors(options =>
 {

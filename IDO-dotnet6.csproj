@@ -40,11 +40,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\components\pipe\highlighter-pipe.ts" />
     <None Remove="ClientApp\src\app\components\tooltip.module.ts" />
     <None Remove="ClientApp\src\app\components\tooltip\tooltip.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\components\pipe\highlighter-pipe.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\tooltip\tooltip.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\tooltip\tooltip.component.ts">
       <SubType>Code</SubType>

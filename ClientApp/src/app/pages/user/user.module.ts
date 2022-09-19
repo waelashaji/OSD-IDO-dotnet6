@@ -11,11 +11,12 @@ import { BannerComponent } from "src/app/components/banner/banner.component";
 import { AuthService } from "src/app/services/auth.service";
 import { DragDropModule } from "@angular/cdk/drag-drop";
 import { TooltipModule } from "../../components/tooltip/tooltip.module";
+import { HighlighterPipe } from "../../components/pipe/highlighter-pipe";
 
 
 
 @NgModule({
-  declarations: [UserComponent, HeaderComponent, IssueComponent, BannerComponent],
+  declarations: [UserComponent, HeaderComponent, IssueComponent, BannerComponent, HighlighterPipe],
   imports: [
     CommonModule,
     UserRoutingModule,

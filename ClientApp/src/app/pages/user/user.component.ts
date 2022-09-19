@@ -59,7 +59,7 @@ export class UserComponent implements OnInit {
 
   addIssue() {
     let issue = new Issue;
-    this.userService.addIssue(issue).subscribe(data =>{
+    this.userService.addIssue(issue).subscribe((data :any)=>{
       issue.id = data
       this.toDo.unshift(issue)
       

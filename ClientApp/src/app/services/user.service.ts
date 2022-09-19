@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Issue } from '../interfaces/issue';
@@ -9,6 +9,7 @@ import { map } from 'rxjs';
 })
 export class UserService {
 
+  @Output() searchEvent: EventEmitter<string> = new EventEmitter<string>();
   readonly API_URL = environment.apiUrl;
 
   constructor(
@@ -33,8 +34,7 @@ export class UserService {
 
   addIssue(issue: Issue) { return this.http.post<string>(`${this.API_URL}/Issues/`, issue);}
 
-  updateIssue(id: string, issue: Issue) {
-    console.log(issue)
+  updateIssue(id: number, issue: Issue) {
     return this.http.put<Issue>(`${this.API_URL}/Issues/${id}`, issue);
   }
 

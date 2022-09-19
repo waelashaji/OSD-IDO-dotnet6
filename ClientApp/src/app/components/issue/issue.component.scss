@@ -20,6 +20,7 @@
   .title {
     font-size: 16px;
     height: 44px;
+    cursor: pointer;
   }
 
   .importance {
@@ -69,4 +70,9 @@ input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
+}
+
+::ng-deep .highlighted-text {
+  background-color: yellow;
+  color: black;
 }
