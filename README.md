@@ -1,4 +1,4 @@
-# OSD-IDO-dotnet6
+# Kanban Board dotnet6 & Angular
 
 1 navigate to ClientApp, and install the necessary packages ( npm i ) <br/>
 2 navigate back to the root directory <br/>
